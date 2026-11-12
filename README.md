@@ -423,6 +423,12 @@ php artisan migrate:fresh --seed
 
 ![Panel de seguridad con contadores, IPs sospechosas y eventos](docs/capturas/security-dashboard.jpeg)
 
+### Panel con intentos fallidos y bloqueos
+
+Evidencia generada después de cinco fallos consecutivos y un intento desde la IP bloqueada: el panel muestra `5` eventos `failed`, `1` evento `blocked`, la IP `127.0.0.1` clasificada como **CRÍTICO** y el detalle de los últimos eventos.
+
+![Panel con intentos fallidos, bloqueos y clasificación CRÍTICO](docs/capturas/security-dashboard-eventos.jpeg)
+
 ---
 
 ## 🔎 Verificación manual
@@ -597,7 +603,8 @@ seguridad-logs/
 │   └── seeders/DatabaseSeeder.php
 ├── docs/capturas/
 │   ├── security-login.jpeg
-│   └── security-dashboard.jpeg
+│   ├── security-dashboard.jpeg
+│   └── security-dashboard-eventos.jpeg
 ├── resources/views/
 │   ├── security-login.blade.php
 │   └── security-dashboard.blade.php
